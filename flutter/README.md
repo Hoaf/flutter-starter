@@ -1,16 +1,98 @@
 # flutter_demo
 
-A new Flutter project.
+Flutter client for the `nt-flutter-starter` project.
 
-## Getting Started
+## Prerequisites
 
-This project is a starting point for a Flutter application.
+1. Install Flutter SDK (stable channel): https://docs.flutter.dev/get-started/install
+2. Verify your environment:
 
-A few resources to get you started if this is your first Flutter project:
+```bash
+flutter doctor
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+3. Ensure at least one device is available:
+   - Android Emulator
+   - iOS Simulator (macOS only)
+   - Chrome (for web)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Check connected targets:
+
+```bash
+flutter devices
+```
+
+## Install Dependencies
+
+From the `flutter` folder:
+
+```bash
+flutter pub get
+```
+
+## Run The App
+
+Start with default target:
+
+```bash
+flutter run
+```
+
+Run on a specific platform:
+
+```bash
+# Android
+flutter run -d android
+
+# iOS (macOS only)
+flutter run -d ios
+
+# Web (Chrome)
+flutter run -d chrome
+
+# macOS desktop
+flutter run -d macos
+```
+
+If multiple devices are connected, choose one:
+
+```bash
+flutter run -d <device-id>
+```
+
+## Build Release Artifacts
+
+```bash
+# Android APK
+flutter build apk --release
+
+# iOS (requires Xcode signing)
+flutter build ios --release
+
+# Web
+flutter build web
+```
+
+## Useful Commands
+
+```bash
+# Static analysis
+flutter analyze
+
+# Run tests
+flutter test
+
+# Clean build cache
+flutter clean
+```
+
+## Troubleshooting
+
+- If dependencies fail, run `flutter clean && flutter pub get`.
+- If iOS build fails, run:
+
+```bash
+cd ios && pod install && cd ..
+```
+
+- Re-check setup with `flutter doctor -v`.
