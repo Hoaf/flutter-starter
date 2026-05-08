@@ -81,21 +81,6 @@ dependencies:
 
   event_bus: ^2.0.1
 
-  ## Frameworks packages will be imported from url
-  nt_ft_storage:
-    path: nt_security_libraries/nt_ft_storage
-
-  # nt_ft_ssl_pinning: ^0.2.0
-
-  #  networking:
-  #    path: nt_security_libraries/networking
-
-  #  nt_ft_cryptography:
-  #    path: nt_security_libraries/nt_ft_cryptography
-
-  nt_ft_core:
-    path: nt_security_libraries/nt_ft_core
-
   #  nt_ft_resiliency:
   #    path: nt_security_libraries/nt_ft_resiliency
   bloc_test: ^10.0.0
@@ -104,17 +89,9 @@ dependencies:
   path_provider: ^2.1.5
   permission_handler: ^12.0.0+1
   states_rebuilder: ^6.4.0
-  flutter_html_table: ^3.0.0
-  flutter_html: ^3.0.0
-  upgrader: ^12.3.0
   #  notification_permissions: ^0.6.1
   package_info_plus: ^8.3.0
   is_first_run: ^1.0.0
-  flutter_local_notifications: ^19.1.0
-  signalr_netcore: ^1.4.3
-  dotted_border: ^3.1.0
-  file_picker: ^10.3.3
-  flutter_cached_pdfview: ^0.4.3
   cached_network_image: ^3.4.1
 #  connectivity_plus: ^6.1.4
 

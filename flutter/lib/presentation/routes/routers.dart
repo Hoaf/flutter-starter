@@ -13,15 +13,21 @@ abstract class AppRouter {
   static final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
   static Map<String, Widget Function(BuildContext)> routes = {
-    initialRoute: (context) => const TestPage(),
+    initialRoute: (context) => TabBarPage(),
     testRoute: (context) => const TestPage(),
   };
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case AppRouter.loginRoute:
-        // var arg = settings.arguments as NotificationArguments?;
+        var arg = settings.arguments;
+        print("============== $arg");
+
         return MaterialPageRoute<dynamic>(
+          settings: RouteSettings(
+            name: AppRouter.loginRoute,
+            arguments: arg,
+          ),
           builder: (context) {
             return LoginPage();
           },
