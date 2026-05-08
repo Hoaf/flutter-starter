@@ -89,7 +89,7 @@ class LoginPageState extends State<LoginPage> with WidgetsBindingObserver {
   Widget build(BuildContext context) {
     final inset = MediaQuery
         .of(context)
-        .text;
+        .padding;
     return Scaffold(
       backgroundColor: Colors.grey[200],
       body: SingleChildScrollView(
