@@ -39,6 +39,8 @@ class AppColors {
   static const appBarBackgroundColor = Color(0xFF070042);
 
   static const blue = Color(0xFF0063F5);
+  static const cyan = Color(0xFF00BCD4);
+  static const cyanLight = Color(0xFFE0F7FA);
   static const textColor = Color(0xFF343A40);
   static const textColorLight = Color(0xFFFFFFFF);
 
