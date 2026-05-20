@@ -1,5 +1,5 @@
-import 'package:flutter_demo/presentation/screens/auth/login_page.dart';
-import 'package:flutter_demo/presentation/screens/test/test_page.dart';
+import 'package:flutter_demo/features/auth/presentation/pages/login_page.dart';
+import 'package:flutter_demo/presentation/screens/home/home_page.dart';
 import 'package:flutter/material.dart';
 
 abstract class AppRouter {
@@ -8,20 +8,20 @@ abstract class AppRouter {
   static const String plashRoute = '/plash';
   static const String dashboardRoute = '/dashboard';
   static const String testRoute = '/test';
+  static const String homeRoute = '/home';
 
   static final RouteObserver<ModalRoute> routeObserver = RouteObserver<ModalRoute>();
   static final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
   static Map<String, Widget Function(BuildContext)> routes = {
-    initialRoute: (context) => TabBarPage(),
-    testRoute: (context) => const TestPage(),
+    initialRoute: (context) => const LoginPage(),
+    '/home': (context) => const HomePage(),
   };
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case AppRouter.loginRoute:
         var arg = settings.arguments;
-        print("============== $arg");
 
         return MaterialPageRoute<dynamic>(
           settings: RouteSettings(
